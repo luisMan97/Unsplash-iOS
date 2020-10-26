@@ -186,6 +186,7 @@
 		4E1DEB6725464F6A00BE9A50 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				4E1DEB42254630F700BE9A50 /* Cell */,
 				4EDB65C7254387F700C34364 /* PhotoListHomeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -289,14 +290,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4EDB65AC254370A100C34364 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				4E1DEB42254630F700BE9A50 /* Cell */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		4EDB65AD254370AB00C34364 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,7 +328,6 @@
 			children = (
 				4EDB65AA2543709800C34364 /* View */,
 				4EDB65AD254370AB00C34364 /* ViewController */,
-				4EDB65AC254370A100C34364 /* ViewModel */,
 			);
 			path = PhotosHome;
 			sourceTree = "<group>";
