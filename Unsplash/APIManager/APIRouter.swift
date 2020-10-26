@@ -7,28 +7,6 @@
 
 import Foundation
 
-extension URLComponents {
-    
-    mutating func setQueryItems(with parameters: [String: String]) {
-        self.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
-    }
-}
-
-extension String {
-    
-    func queryString(params: [String: String]) -> String {
-        var components = URLComponents(string: self)
-        components?.setQueryItems(with: params)
-        return components?.url?.absoluteString ?? self
-    }
-    
-}
-
-enum HTTPMethod: String {
-    case GET, POST, UPDATE, DELETE, PUT
-}
-
-
 enum APIRouter {
     
     case Photos([String: String])
@@ -48,7 +26,7 @@ enum APIRouter {
     }
     
     private var url: String {
-        return "https://api.unsplash.com/"
+        return APIManagerConstants.endpoint
     }
     
     private var urlRequest: URLRequest? {

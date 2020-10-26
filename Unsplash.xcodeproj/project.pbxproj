@@ -26,6 +26,10 @@
 		4E1DEB712546504F00BE9A50 /* PhotoListHomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DEB702546504F00BE9A50 /* PhotoListHomeViewCell.swift */; };
 		4E1DEB752546519E00BE9A50 /* PhotoListHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DEB742546519E00BE9A50 /* PhotoListHomeViewController.swift */; };
 		4E1DEB782546529800BE9A50 /* PhotoListHomeViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DEB772546529800BE9A50 /* PhotoListHomeViewControllerExtensions.swift */; };
+		4E1DEB93254667E900BE9A50 /* URLComponentsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DEB92254667E900BE9A50 /* URLComponentsExtensions.swift */; };
+		4E1DEB962546680B00BE9A50 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DEB952546680B00BE9A50 /* StringExtension.swift */; };
+		4E1DEB9A2546683D00BE9A50 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DEB992546683D00BE9A50 /* HTTPMethod.swift */; };
+		4E1DEB9F2546689700BE9A50 /* APIManagerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1DEB9E2546689700BE9A50 /* APIManagerConstants.swift */; };
 		4EDB65942543704E00C34364 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB65932543704E00C34364 /* AppDelegate.swift */; };
 		4EDB65962543704E00C34364 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB65952543704E00C34364 /* SceneDelegate.swift */; };
 		4EDB659D2543705200C34364 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB659C2543705200C34364 /* Assets.xcassets */; };
@@ -61,6 +65,10 @@
 		4E1DEB702546504F00BE9A50 /* PhotoListHomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListHomeViewCell.swift; sourceTree = "<group>"; };
 		4E1DEB742546519E00BE9A50 /* PhotoListHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListHomeViewController.swift; sourceTree = "<group>"; };
 		4E1DEB772546529800BE9A50 /* PhotoListHomeViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListHomeViewControllerExtensions.swift; sourceTree = "<group>"; };
+		4E1DEB92254667E900BE9A50 /* URLComponentsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLComponentsExtensions.swift; sourceTree = "<group>"; };
+		4E1DEB952546680B00BE9A50 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4E1DEB992546683D00BE9A50 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		4E1DEB9E2546689700BE9A50 /* APIManagerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerConstants.swift; sourceTree = "<group>"; };
 		4EDB65902543704E00C34364 /* Unsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDB65932543704E00C34364 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4EDB65952543704E00C34364 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 				4E1DEB2C2546041000BE9A50 /* Errors.swift */,
 				4E1DEB2F2546043400BE9A50 /* ServiceResultWithEntity.swift */,
 				4E1DEB3F25460D5900BE9A50 /* RepositoryResult.swift */,
+				4E1DEB992546683D00BE9A50 /* HTTPMethod.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -215,6 +224,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		4E1DEB9C2546687A00BE9A50 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4E1DEB9E2546689700BE9A50 /* APIManagerConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		4EDB65872543704D00C34364 = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +309,7 @@
 		4EDB65B52543791F00C34364 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4E1DEB9C2546687A00BE9A50 /* Constants */,
 				4E1DEB35254608F800BE9A50 /* Helpers */,
 				4E1DEB2B2546040200BE9A50 /* Enums */,
 				4EDB65B62543793100C34364 /* Extensions */,
@@ -306,6 +324,8 @@
 			children = (
 				4EDB65B72543793C00C34364 /* UIViewExtension.swift */,
 				4E1DEB1F2545F74500BE9A50 /* DecodableExtension.swift */,
+				4E1DEB92254667E900BE9A50 /* URLComponentsExtensions.swift */,
+				4E1DEB952546680B00BE9A50 /* StringExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -428,13 +448,16 @@
 				4E1DEB1D2543D3EE00BE9A50 /* Photo.swift in Sources */,
 				4E1DEB3B2546092E00BE9A50 /* Debug.swift in Sources */,
 				4E1DEB192543CFD100BE9A50 /* Observable.swift in Sources */,
+				4E1DEB93254667E900BE9A50 /* URLComponentsExtensions.swift in Sources */,
 				4EDB65C52543855900C34364 /* PhotosHomeViewControllerExtensions.swift in Sources */,
+				4E1DEB9F2546689700BE9A50 /* APIManagerConstants.swift in Sources */,
 				4EDB65D4254392F800C34364 /* APIRouter.swift in Sources */,
 				4EDB65B82543793C00C34364 /* UIViewExtension.swift in Sources */,
 				4EDB65C125437C5300C34364 /* PhotoHomeViewCell.swift in Sources */,
 				4E1DEB512546355C00BE9A50 /* Urls.swift in Sources */,
 				4E1DEB6D2546500800BE9A50 /* BaseCollectionViewCell.swift in Sources */,
 				4E1DEB372546091200BE9A50 /* NetworkingValidator.swift in Sources */,
+				4E1DEB9A2546683D00BE9A50 /* HTTPMethod.swift in Sources */,
 				4E1DEB4025460D5900BE9A50 /* RepositoryResult.swift in Sources */,
 				4E1DEB282546039D00BE9A50 /* ErrorResponse.swift in Sources */,
 				4E1DEB752546519E00BE9A50 /* PhotoListHomeViewController.swift in Sources */,
@@ -445,6 +468,7 @@
 				4EDB65B32543774000C34364 /* Globals.swift in Sources */,
 				4E1DEB6325464A0C00BE9A50 /* BaseTableViewCell.swift in Sources */,
 				4E1DEB302546043400BE9A50 /* ServiceResultWithEntity.swift in Sources */,
+				4E1DEB962546680B00BE9A50 /* StringExtension.swift in Sources */,
 				4EDB65C8254387F700C34364 /* PhotoListHomeViewModel.swift in Sources */,
 				4E1DEB2D2546041000BE9A50 /* Errors.swift in Sources */,
 				4EDB65962543704E00C34364 /* SceneDelegate.swift in Sources */,

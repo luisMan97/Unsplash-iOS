@@ -53,7 +53,7 @@ extension APIManager {
             
             if !NetworkingValidator.isValidStatusCode(response: response) {
                 do {
-                    let errorEntity: Y = try Y.decode(data: data)
+                    let errorEntity = try Y.decode(data: data)
                     
                    onCompletion?(.errorResult(entity: errorEntity))
                 } catch let error {
